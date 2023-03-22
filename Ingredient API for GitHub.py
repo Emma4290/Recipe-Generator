@@ -1,4 +1,5 @@
 import requests
+import random
 
 ingredient = input("What ingredient would you like to use? ")
 
@@ -14,7 +15,8 @@ response.raise_for_status()
 data = response.json()
 results = data['hits']
 
-for result in results:
-    recipe = result["recipe"]
+random_result = random.choice(results)
 
-    print(recipe["label"], recipe["url"])
+recipe = random_result["recipe"]
+
+print(recipe["label"], recipe["url"])
