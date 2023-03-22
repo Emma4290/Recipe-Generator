@@ -30,8 +30,8 @@ canvas1.create_window(300,200, window=entry1)
 def recipe_generator():
     ingredient = entry1.get()
 
-    YOUR_APP_ID = "d521cb17"
-    YOUR_APP_KEY = "0f4cc4e845451be71de12e71d4a17c91"
+    YOUR_APP_ID = "" #add app id
+    YOUR_APP_KEY = "" #add app key
 
     url = "https://api.edamam.com/search?q={}&app_id={}&app_key={}".format(ingredient, YOUR_APP_ID, YOUR_APP_KEY)
 
